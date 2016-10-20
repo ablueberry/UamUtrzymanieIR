@@ -10,4 +10,7 @@ describe('app', () => {
         app.quieter('HELLO!!!1one').should.eql('hello')
     })
 
+    it('should remove all whitespaces', () => {
+        app.removeWhitespaces('           Hello from   the other    side    ').should.eql('Hello_from_the_other_side')
+    })
 })
